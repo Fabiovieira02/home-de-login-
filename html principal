@@ -1,68 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vinda á Bosch</title>
-    <input type="submit" onclick="logar(); return false">
-
-
-<script>function logar(){
-
-    var login = document.getElementById('login').value;
-    var senha = document.getElementById('senha').value;
-
-    if(login == "admin" && senha == "admin"){
-        alert('Sucesso');
-        location.href = "home.html";
-        location.href = "home.html";
-    }else{
-        alert('Usuario ou senha incorretos');
-    }
-
-}
-</script>
-    <style>
-
-        *{
-            box-sizing: border-box;
-        }
-
-        body{
-            width: 100%;
-            height: 100%;
-        }
-
-        form{
-            width: 300px;
-            margin: 200px auto;
-            text-align: center;
-        }
-
-        input{
-            display: block;
-            margin: 10px auto;
-            width: 250px;
-            height: 30px;
-        }
-
-    </style>
-
+<link rel="stylesheet" href="./csss.css">  
 </head>
+
 <body>
+
+<div class='container'>
+  <div class='card'>
+    <h1> Cadastrar </h1>
     
+    <div id='msgError'></div>
+    <div id='msgSuccess'></div>
+    
+            <div class="label-float">
+               <input type="text" id="nome" placeholder=" " required>
+               <label id="labelNome" for="nome">Nome</label>
+            </div>
 
-    <form>
-        <h3>Bem-vinda á Bosch</h3>
-        <h3>Login</h3>
-        <input type="text" placeholder="Login" id="login">
-        <input type="password" placeholder="Senha" id="senha">
-        <input type="submit" onclick="logar(); return false">
+            <div class="label-float">
+               <input type="text" id="usuario" placeholder=" " required>
+               <label id="labelUsuario" for="usuario">Usuário</label>
+            </div>
+            
+            <div class="label-float">
+               <input type="password" id="senha" placeholder=" " required>
+               <label id="labelSenha" for="senha">Senha</label>
+               <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+               
+            </div>
 
-    </form>
-
-
-
+            <div class="label-float">
+               <input type="password" id="confirmSenha" placeholder=" " required>
+               <label id="labelConfirmSenha" for="confirmSenha">Confirmar Senha</label>
+               <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+            
+            <div class='justify-center'>
+               <button onclick='cadastrar()'>Cadastrar</button>
+            </div>
+<script type="text/javascript" src="./javaa.js"></script>
+    
+  </div>
+  </div>
 </body>
-</html>
